@@ -1,0 +1,153 @@
+/* Hoja de estilo principal responsive pero NO dispositivos pequenos.
+
+/* SETTINGS BASE */
+@font-face {
+    font-family: "Stamp-writer";
+    src: url("stamp-writer-font.ttf");   
+}
+
+@font-face {
+    font-family: "Bank-printer";
+    src: url("bank-printer.otf");
+}
+
+* { margin: 0px; }
+
+body {
+    font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
+    font-size: 16px;
+}
+
+/* LOGO Y MENU DE NAVEGACION */ 
+
+/* Definiendo dimensiones, posicion y background del header */
+header {
+    position: sticky;
+    top: 0;
+    height: 26vh;
+    background: rgb(0, 140, 220) url("../images/header-fill.png") no-repeat fixed top;
+    background-size: 100% 100%;
+}
+
+/* Estructura */
+header > nav {
+    display: flex; /* transforma el nav en un flex container */
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: auto;
+    height: 12vh;
+    background-color: rgb(200, 200, 200);
+}
+
+header nav > ul {
+    list-style-type: none;
+    margin-left: auto; /* la lista es un flex item */
+    margin-right: 1vw;
+}
+
+/* Muestra botones en linea */
+nav li {
+    display: inline;
+    margin: 1vh 1vw;
+}
+
+/* Estilando botones */
+nav a {
+    font-family: "Bank-printer";
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 1vh;
+    border-style: none;
+    border-radius: 8px;
+    background-color: rgb(0, 40, 90);
+}
+
+nav a:hover {
+    background-color: rgb(0, 127, 127);
+}
+
+
+/* Dimensionando y definiendo estilo del logo empresarial */
+nav img {
+    height: 8vh;
+    width: 8vh;
+    margin-left: 6vh;
+    border: 1px solid rgb(0, 40, 90);
+    border-radius: 100%;
+}
+
+/*  CONTENIDO PRINCIPAL */
+
+/* Titulo de la pagina */
+main > h1 {
+    font-family: "Stamp-writer";
+    margin: 4vh 4vh;
+    padding: 2vh;
+    text-align: center;
+}
+
+main {
+    padding: 2vh 2vw;
+}
+
+/* FOOTER */
+
+/* Dimensiones, posicion (flexbox) y background */
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 28vh;
+    background-color: rgb(200, 200, 200);
+    font-size: 0.8rem;
+    padding-top: 4vh;
+}
+
+.footer-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* Primeros dos items del footer */
+.footer-item-1, .footer-item-2 {
+    flex: 50%;
+    height: 20vh;
+    padding-left: 4vw;
+    padding-right: 4vw
+    
+}
+
+/* Scroll bar para ajustar texto a tamanos peque */
+.footer-item-2 {
+    color: rgb(0, 40, 90);
+    overflow-y: auto;
+    border-left: 2px solid rgb(240, 240, 240);
+    
+}
+
+/* Nota de Copyright, todo el vw. */
+.footer-item-3 {
+    flex: 100%;
+    height: 4vh;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(0, 40, 90);
+    padding: 3vh;
+    color: rgb(255, 255, 255);
+}
+
+/* Imagen Logo final, dentro del item 1 de la caja */
+footer img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vh;
+    border-radius: 50%;
+    height: 12vh;
+    width: 12vh;
+    background-color: rgb(0, 40, 90);
+
+    /*margin: 3vh auto;*/
+    /*padding: 1vh;*/
+}
+
