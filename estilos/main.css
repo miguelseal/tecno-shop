@@ -1,14 +1,12 @@
-/* Hoja de estilo principal responsive pero NO dispositivos pequenos.
-
 /* SETTINGS BASE */
 @font-face {
     font-family: "Stamp-writer";
-    src: url("stamp-writer-font.ttf");   
+    src: url("../fonts/stamp-writer-font.ttf");   
 }
 
 @font-face {
     font-family: "Bank-printer";
-    src: url("bank-printer.otf");
+    src: url("../fonts/bank-printer.otf");
 }
 
 * { margin: 0px; }
@@ -24,32 +22,46 @@ body {
 header {
     position: sticky;
     top: 0;
-    height: 20vh;
+    height: 25vh;
     background: rgb(0, 140, 220) url("../images/header-fill.png") no-repeat fixed top;
     background-size: 100% 100%;
 }
-
-/* Estructura */
-header > nav {
-    display: flex; /* transforma el nav en un flex container */
+/* Barra de navegacion con flexbox*/
+.header-container {
+    display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    margin-left: auto;
-    height: 12vh;
+    height: 50%;
     background-color: rgb(200, 200, 200);
 }
 
-header nav > ul {
-    list-style-type: none;
-    margin-left: auto; /* la lista es un flex item */
-    margin-right: 1vw;
+.header-item {
+    height: 100%;
+    overflow: hidden;
 }
 
-/* Muestra botones en linea */
-nav li {
-    display: inline;
-    margin: 1vh 1vw;
+/* Ajuste de tamano y margen de logo */
+#company-logo {
+    height: 90%;
+    margin-left: 5%;
 }
+
+nav {
+    margin-left: auto;
+    width: 80%;
+}
+
+/* Utilizamos flexbox tb para el nav para centrar todo mas facil y que sea responsive */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    align-items: center;
+    justify-content: right;  
+}
+
+nav li { margin-right: 1%; }
 
 /* Estilando botones */
 nav a {
@@ -57,37 +69,31 @@ nav a {
     font-size: 0.8rem;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    padding: 1vh;
+    padding: 1.5vh;
     border-style: none;
     border-radius: 8px;
     background-color: rgb(0, 40, 90);
+    box-shadow: 2px 2px rgb(50, 50, 50);
+    transition: ease-in-out 150ms;
 }
 
-nav a:hover {
-    background-color: rgb(0, 127, 127);
-}
+nav .current-page { background-color: rgb(0, 100, 200); } 
 
+nav a:hover { background-color: rgb(0, 150, 250); }
 
-/* Dimensionando y definiendo estilo del logo empresarial */
-nav img {
-    height: 8vh;
-    width: 8vh;
-    margin-left: 6vh;
-    border: 1px solid rgb(0, 40, 90);
-    border-radius: 100%;
-}
+nav a:active { box-shadow: none; }
 
 /*  CONTENIDO PRINCIPAL */
 
 /* Titulo de la pagina */
 main > h1 {
     font-family: "Stamp-writer";
-    margin: 4vh 4vh;
-    padding: 2vh;
+    margin: 1% 1%;
+    padding: 1%;
     text-align: center;
 }
 
-main {
+main, aside {
     padding: 2vh 2vw;
 }
 
@@ -102,16 +108,14 @@ footer {
 }
 
 /* Generando los 3 bloques con flexbox */
-.flex-container {
+.footer-container {
     display: flex;
     flex-flow: row nowrap;
     height: 80%;
     align-items: center; /* evitamos usar margin/padding */
 }
 
-.flex-item {
-    flex: 50%;
-}
+.footer-item { flex: 50%; }
 
 /* Contenemos la imagen en el bloque y posibilitamos centrar */
 #block-1 {
