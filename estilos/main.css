@@ -151,3 +151,145 @@ footer img {
     /*padding: 1vh;*/
 }
 
+.cajapadre{
+    display: flex;
+    width: 100%;
+
+
+}
+/* texto de las cajas  */
+
+.p{
+    text-align: center;
+    color: rgb(32, 99, 224);
+
+}
+
+.flex-container{
+width: 100%; 
+
+display: block;
+-webkit-box-flex: unset;
+}
+
+
+
+
+.caja1{
+    animation-name: caja1;
+    animation-duration: 5s;
+    text-align: center;
+     width: 25%;
+border-left-color: cornsilk;
+margin-left: 50px;
+
+height: 200px;
+border: solid 3px; color: black;
+
+background-color: white
+
+
+}
+
+.cajahija{
+   display: flex;
+
+       
+   
+}
+
+@keyframes caja1{
+    0% {background-color: rgb(253, 2, 2);}
+    25% {background-color: rgb(230, 61, 61);}
+50% {background-color: rgb(245, 104, 104);}
+75% {background-color: rgb(255, 155, 142);}
+90% {background-color: rgb(250, 177, 167);}
+100% {background-color: rgb(253, 204, 198);}
+}
+
+.caja2{
+
+
+     width: 30%;
+border-left-color: cornsilk;
+
+height: inherit;
+border: solid 3px; color: black;
+margin-left: 0px;
+background-color: white;
+text-align: center;
+
+
+}
+
+
+.caja3{
+
+
+     width: 25%;
+border-left-color: cornsilk;
+margin-left: 50px;
+height: 200px;
+border: solid 3px; color: black;
+color: black;
+background-color: white;
+margin-right: 1%;
+
+
+}
+
+.caja4{
+margin-left: 50px;
+    height: 200px;
+     width: 25%;
+     margin-top: 20px;
+border-left-color: rgb(39, 31, 0);
+top: 10px;
+border: solid 3px; color: black;
+color: rgb(0, 0, 0);
+background-color: white;
+text-align: center;
+
+}
+
+.caja5{
+    animation-name: caja1;
+    animation-duration: 8s;
+margin-top: 20px;
+     width: 25%;
+border-left-color: rgb(42, 91, 184);
+margin-left: 50px;
+height: 200px;
+border: solid 3px; color: black;
+text-align: center;
+background-color: white;
+
+
+}
+.caja6{
+
+   margin-left: 50px;
+   margin-top: 20px;
+     width: 25%;
+border-left-color: cornsilk;
+margin-right: 1%;
+
+height: 200px;
+border: solid 3px; color: black;
+
+background-color:white;
+
+
+}
+.caja7{
+margin-left: 50px;
+     width: 25%;
+border-left-color: cornsilk;
+
+height: 200px;
+border: solid 3px; color: black;
+
+background-color: white;
+
+
+}
