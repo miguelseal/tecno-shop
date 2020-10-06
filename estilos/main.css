@@ -87,6 +87,7 @@ nav a:hover { background-color: rgb(0, 150, 250); }
 nav a:active { box-shadow: none; }
 
 
+
 /*  CONTENIDO PRINCIPAL */
 /* Titulo de la pagina */
 main > h1 {
@@ -156,6 +157,9 @@ figure a {
 figure p, aside h2 { text-align: center; }
 
 aside h2 { margin: 10%; }
+#main-item-1, figure  {
+    border-radius: 2%;
+}
 
 @media only screen and (max-width: 858px) {
     #main-item-2 { display: none; }
